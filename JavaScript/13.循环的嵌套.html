@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    /*
+    例:1.打印出三角形
+    *
+    **
+    ***
+    ****
+    *****
+    每一行打印的个数和当前行数相同
+
+    for(var i=0;i<5;i++){ //第一层循环决定打印了几行
+            for(var j=0;j<=i;j++){  //第二层循环决定每行打印几个
+                document.write("*");
+            }
+            document.write("<br/>");  
+        }
+
+
+2.打印出三角形
+    *
+   **
+  ***
+ ****
+*****
+
+每一行打印的空格等于总行数-当前行数
+每一行打印*和行数一致
+
+
+*/
+    for(var i=1;i<=5;i++){  //打印出5行
+        for(var k=1;k<=5-i;k++){  //每行打印的空格
+            document.write("&ensp;");
+        }
+        for(var j=1;j<=i;j++){  //每行打印的*
+            document.write("*");
+        }
+        document.write("<br/>");
+    }    
+
+
+
+
+           
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

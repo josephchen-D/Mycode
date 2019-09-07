@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    //例题:1.点击清除文本内容
+        window.onload=function(){          
+            var ot=document.getElementById("text");  //找到标签节点
+            var ob=document.getElementById("clear");
+            ob.onclick=function(){  //添加事件驱动函数
+                ot.value="";  //点击按钮使使文本为空
+            }
+        }
+        //2.计算n的阶乘
+        window.onload=function(){
+            var a=document.getElementById("num");
+            var b=document.getElementById("jc");
+            var c=document.getElementById("output");
+            function fac(n){
+                    if(n==1){
+                        return 1;
+                    }   
+                    return fac(n-1)*n;
+                }
+                
+                var i=fac(3);             
+                
+            b.onclick=function(){
+                
+                c.value=i;  //给文本框赋值为函数的输出值                          
+            }           
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="默认文字" id="text">
+    <input type="button" value="清除" id="clear">
+    <br>
+
+    <input type="text" value="3" id="num">的
+    <input type="button" value="阶乘" id="jc">为
+    <input type="text" value="" id="output">  
+</body>
+</html>

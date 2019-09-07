@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    /*
+    复合数据类型
+    数组:存储大量数据 
+    */
+    var arr=new Array(1,true,"hello");  //创建一个新数组,也可以省略new
+    var arr1=new Array(10); //此时表示数组长度为10的数组
+    var arr2=[1,2,3];  //一般用此方法创建
+    alert(arr2[0]);  //访问对应数组中的第0个数
+    //2.数组的长度属性
+        alert (arr.length);  //输出对应数组的长度
+        arr.length=2; //也可以设置数组的长度
+
+    /*
+    3.数组的遍历
+    例:通过循环给数组赋值,值为下标的平方/随机数  Math.random() --随机0~1之间任意数
+    
+    */  
+    //通过for循环
+        var arr3=[];
+        for (var i = 0; i<10;i++) {
+            arr3[i]=i*i;      
+        }
+        alert(arr3);
+
+        var arr4=[];
+        for (var i = 0; i<10;i++) {
+            arr4[i]=Math.random();      
+        }
+        alert(arr4);
+    
+    /*
+    通过for in 循环  快速遍历
+    [格式]:
+        for (var 变量 in 数组 ){
+        } 
+    */
+        var arr5=["red","blue","green"]
+        for (var i in arr5){
+            document.write(arr5[i]+"<br/>");
+        }
+
+
+        
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

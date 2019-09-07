@@ -1,0 +1,47 @@
+     
+一.大于小于 > <
+1.如果两个操作数都是数值,则数值比较
+2.如果都是字符串,则比较字符串对应的字符编码值(参考ASCII表)
+ASCII码表  二进制和字符对应的表
+     例如:
+    <script type="text/javascript">
+        alert("a">"b");   //false
+    </script>
+
+在进行字符串比较时,逐位去比较,直到比较出大小,终止比较
+    例如:
+    <script type="text/javascript">
+        alert("abc"<"bcd")  //true
+    </script>
+3.两个操作数有一个是数值,则将另一个转换成数值再比较
+    例如:
+    <script type="text/javascript">
+        alert(2>true);  //2>1 true
+    </script>
+
+二.等于不等于 == !=
+1.一个操作数为布尔值,再比较之前将其转换成数值,false 0;true 1;
+    例如:
+    <script type="text/javascript">
+        alert(1==true);  //1=1 true
+    </script>
+2.若一个操作数为字符串,则先转换成数值再比较
+    例如:
+    <script type="text/javascript">
+        alert(1=="1");  //1=1 true
+    </script>
+3.一个操作数为NaN,则==返回false, !=反回 true; 并且NaN != NaN
+    例如:
+    <script type="text/javascript">
+        alert(1==NaN);  //false
+    </script>
+4.在全等(===)和全不等(!==),如果值和类型都相等,则返回true,否则返回false;
+    例如:
+<script type="text/javascript">
+    alert(1==="1");  //类型不同,false
+    alert(20===Number("20"));  //true
+</script>
+
+
+
+

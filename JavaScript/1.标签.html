@@ -1,0 +1,53 @@
+一.JS的应用范围:
+PC端Web开发(网站)
+移动端开发(WebApp 混合App)
+服务端开发(NodeJs)
+游戏开发(unity3D-TypeScipt 网页游戏)
+
+二.JS的功能
+用户交互(表单验证)
+网页特效(漂浮的广告)
+记住用户名密码
+网页游戏
+......
+
+三.JS的组成
+
+JavaScript:1.ECMAScript 2.BOM 3.DOM
+1.是一种由Ecma国际(前身为欧洲计算机制造商协会)通过ECMA-262标准化的脚本程序设计语言.
+它在万维网上应用广泛,它往往被称为JavaScript或JScript,但实际上后两者是ECMA-262标准的
+实现和扩展.
+2.Browse Object Model,提供浏览器交互的方法和接口 BOM:整个浏览器
+3.Document Object Model,提供访问和操作网页内容的方法和接口 DOM:从<html>开始 到</html>结束
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript"> // 说明当前script标签中文本的类型
+    // JS代码必须写在JS标签中,为了语法规范,sc标签写在head标签里.
+        alert("hello world!");  //在页面中弹出警告框
+        document.write("hello word");//在当前文本上输入内容
+    </script>
+
+    <script type="text/javascript">
+        alert("world hello!");  // 可以引入多个sc标签,自上而下运行      
+    </script>
+
+    <script type="text/javascript" src="demo.js">
+        // 可以引入外部JS.如果当前sc标签作用是引入外部文件,这个sc标签中就不能再写代码了
+    </script>
+
+    <script type="text/javascript" >   
+        document.write("&lt/script&gt");  //&lt可以代替<,&gt可以代替>,避免从上而下执行时提前结束sc
+    </script>
+
+</head>
+<body>  
+</body>
+</html>
+

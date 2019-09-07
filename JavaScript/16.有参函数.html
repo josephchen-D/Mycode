@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    /*
+    [注]:到底输出几个是不确定的
+        我们把函数中不确定的值当做形参(形式上的参数)进行声明.
+
+        有参函数封装过程:
+        function 函数名(形参...){
+            函数体;
+        }
+
+        例如:
+        1.输出n个"新津暴徒" 
+    */
+        function print(n){
+            for(var i=1;i<=n;i++){
+            document.write("新津暴徒<br/>");
+            }
+        }
+        print(6);  //调用函数,使用实参给形参赋值
+
+      //2.封装一个函数,计算两个数之和
+      function add(num1,num2){
+          document.write(num1+num2);
+      }
+      add(1,2);
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

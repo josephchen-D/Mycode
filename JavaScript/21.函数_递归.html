@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+/*[概念]:
+        函数可以自己调用自己,称为递归调用.
+   [注]:我们可以自己写出递归,但我们并不知道它是如何得出结果. 
+
+   函数的递归调用
+   方法:
+        1.首先去找临界值,即是无需计算,获得的值
+        2.找这一次和上一次的关系
+        3.假设当前函数已经可以使用了,调用自身计算上一次的运行结果,再写出这次的运行结果
+    特点:
+        1.必须有参数
+        2.必须return
+    
+    [注]:递归会在短时间内使内存剧增. (因为在计算出最初始的值时才会释放内存)
+    例题:1.求1~n的和?
+        sum(n)=sum(n-1)+n;
+        
+*/
+        function sum(n){
+            if (n==1){
+                return 1;             
+            }
+            return sum(n-1)+n;
+        }
+        document.write(sum(7));
+        //2.打印n个hello world
+        function print(n){
+            if(n==0){
+                return;
+            }
+            document.write ("hello world!<br/>");
+            return print(n-1);
+        }
+        print(5);
+
+        /*
+        3.(斐波那锲数列)设有一堆新生兔子,从第四个月开始,他们每个月月初都生一对兔子,
+            新生的兔子从第四个月月初开始又生一对兔子,按照此规律,且兔子无死亡,
+            第n(n<=20)个月末共有多少兔子?
+
+            分析:
+        月份    一月兔   二月兔   三月兔   四月成熟月兔     一共(对)
+        1       1        0        0         0             1
+        2       0        1        0         0             1
+        3       0        0        1         0             1
+        4       1        0        0         1             2
+        5       1        1        0         1             3
+        6       1        1        1         1             4
+        7       2        1        1         2             6
+        8       3        2        1         3             9
+        9       4        3        2         4             13
+       10       6        4        3         6             19
+
+  可以看出规律:在n>=4时
+              n=(n-1)+(n-3)
+        */
+        function rabbit(month){
+            if(month<4){
+                return 1;   
+            }
+        return rabbit(month-1)+rabbit(month-3);     
+        }
+        document.write(rabbit(10));
+        
+        
+
+    </script>
+</head>
+<body>   
+</body>
+</html>

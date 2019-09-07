@@ -1,0 +1,45 @@
+[注]JS中的数据类型分为两大类
+一.基本数据类型
+1.数字: number  
+2.字符串: string
+3.布尔值: boolean (true/false)
+4.特殊数据类型: null空 undefined未声明
+
+二.复合数据类型
+
+
+标识符:用户自定义的所有名字.
+变量名规律:
+1.由数组.字母.下划线.$组成 
+2.不能以数字开头
+3.区分大小写
+        
+JS是弱语言类型,变量被赋值是什么类型,就是什么类型,但不建议改动 如:
+<script>
+    var name="xxx";  //string型
+    name="true";  //变为bool型
+</script>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        var age=18;  // 声明变量
+        age=20;  //初始化变量
+        alert(age);  //输出20
+        var name="xxx",name="giao",sex="male";  //同时声明多个变量
+        alert(typeof sex);  //输出变量类型
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+一.顺序结构 :从上朝下执行
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    //题目:输入两个数,然后交换两个数,再输出他们交换后的结果
+        var num1=1;
+        var num2=2;
+        var tem=num1;
+        num1=num2;
+        num2=tem;
+        alert("num1:"+num1+"num2:"+num2);  // 2 1
+    </script>
+</head>
+</html>
+
+二.选择结构 :根据不同的情况,执行对应代码
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    //题目1:判断一个数是偶数还是奇数?
+        var num3=9;
+        if (num3%2==0){   //注:if成立与否只能决定if后面一条语句的执行,{}中的语句当做一条对待
+            alert("这是一个偶数")
+        }
+        else{
+            alert("这是一个奇数")
+        };
+     //题目2:判断两个数字中的最大数
+        var num4=1;
+        var num5=2;
+        var max=null;
+        if (num4>num5) {
+            max=num4; 
+        } else {
+            max=num5; 
+        }; 
+        alert("这两个数中的最大数是:"+max);
+     //题目3:判断一个年份是瑞年还是平年;
+            /*
+                闰年条件:
+                1.可以被400整除
+                    或者
+                2.可以被4整除,但是不能被100整除           
+            */
+        var year=2014;
+        if (year%400==0 || year%4==0 && year%100!=0) {
+            alert("为闰年");          
+        } else {
+            alert("不是闰年");}      
+
+     //多分支语句:从上往下,满足哪个就执行,都不满足就执行最后的else语句.只能进入其中之一.
+     /*
+     题目:成绩判定:大于85 优秀  
+                 75-85 良好
+                 60-75 及格
+                 小于60 不及格    
+     */ 
+            var y=85;
+            if (y>=85) {
+                alert("优秀"); //在这里进行嵌套 
+                if(y>=95 && y<100){
+                     alert("奖励5快钱");
+                }else if(y>=90 && y<95){
+                    alert("奖励1快钱");
+                }else{
+                    alert("奖励辣条一包");
+                }            
+            }else if (y>=75 && y<85){
+                alert("良好");              
+            }else if (y>=60 && y<75){
+                alert("及格");
+            }else {
+                alert("不及格");}
+    </script>
+</head>
+</html>
+

@@ -1,0 +1,30 @@
+一.运算符:
+1.算数运算符
+2.关系运算符
+3.逻辑运算符
+4.赋值运算符
+5.自增.自减运算符
+
+二.自动数据类型转换
+1.任何类型的数据和字符串型数据相加时,其他类型的数据会被自动转化成字符串类型,进行字符串拼接
+<script>
+    var num="false"+"13444";
+    alert(num);
+</script>
+2.除了加法以外的运算,都先要将字符串转换为数字,若字符串不是纯数字,则转化为NaN(Not a Number)
+<script>
+    var num1=3-"1";
+    alert(num1);  //2
+    var num2="aa1"-4;
+    alert(num2);  //NaN
+</script>
+
+<script>
+    var num3=5;
+    num3+=10;  //相当于num3=num3+10
+    alert(num3);  //输出15
+
+    var num4=5;
+    num4*=4;  //相当与num4=num4*4
+    alert(num4);  //输出20
+</script>

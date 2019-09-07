@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type=text/javascript> 
+    /*
+    题目:
+    1.判断一个年份是否是瑞年?   
+    分析:
+        闰年条件:可以被400整除 或者 被4整除且不能被100整除
+        参数:年份
+        返回值:是否是闰年
+    */
+     function LeapYear(year) {
+         if (year %400==0 || year%4==0 && year %100!=0){
+             return true;           
+         }else{
+             return false;
+         }   
+     }   
+     alert(LeapYear(2017));
+    /*
+    2.判断一个数是否为素数?
+    分析:素数条件:只能被1和它本身整除的数
+    参数:一个数
+    返回值:是否是素数
+    */
+    function prime(num){
+        var is=true;
+        for(var i=2;i<num;i++){
+            if(num%i==0){
+                is=false;  //如果有被整除的，则不是素数
+                break;  //此时中断循环
+            }
+        }
+        return  is;
+    }
+    document.write(prime(7));
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

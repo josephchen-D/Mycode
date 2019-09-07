@@ -1,0 +1,69 @@
+一.自动数据类型转换
+任何其他数据类型除了和字符串做相加操作外,
+与数字类型做算数运算的时候,其它数据类型会自动转换成数字.
+1.布尔型:true=1; false=0;
+2.特殊数据类型中:none=0; undefined =NaN;
+
+二.强制数据类型转换
+1.Boolean():将其他类型转为布尔值.
+结论:①:0->false; 非0->true;
+    ②:空字符串->false;非空字符串->true;
+    ③:none->false; undefined->false;
+    例如:
+    <script type="text/javascript">
+        var num=Boolean(1);
+        alert(num);  //输出true
+
+        var num1=Boolean(-1);
+        alert(num1);  //输出true
+
+        var num2=Boolean("");
+        alert(num2);  //输出false
+
+        var num3=Boolean("hi");
+        alert(num3);  //输出true
+    </script>
+2.Number :将其他类型转为数字
+结论:①:布尔值:true->1;false->0;
+    ②:字符串:纯数字的字符串->对应的数字; 否则->NaN
+    ③:特殊数据类型:null->0; undefined->NaN;
+    例如:
+    <script type="text/javascript">
+        var num4=Number(true); //1
+        alert(num4);
+
+        var num5=Number(false);
+        alert(num5); //0
+
+        var num6=Number("123")
+        alert(num6);  //123
+
+        var num7=Number("12ad3")
+        alert(num7);  //NaN
+    </script>
+3.parseInt() :取整,除了将别的数据类型转换为数字(兼容Number),还能取整
+    例如:
+    <script type="text/javascript">
+        var num8=Number("20a");
+        alert(num8);  //NaN
+
+        var num9=parseInt("20a");
+        alert(num9);  //20,会取整去掉a
+    </script>
+4.parsefloat() :取浮点数,可以将别的类型转换成带小数的数字
+    例如:
+    <script type="text/javascript">
+        var num10=parseFloat("3.14");
+        alert(num10);  //输出3.14,类型为number
+        alert(typeof num10);  //输出数据类型
+    </script>
+5.注:
+    var num=2/0;
+    alert(num);  会输出infinity,无穷大;
+
+    var num=-2/0;
+    alert(num);  会输出-infinity,无穷小;
+
+    
+
+    

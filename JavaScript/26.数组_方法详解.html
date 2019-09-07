@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    /*
+    1.concat()
+        [格式]:数组1.concat(数组2);
+        [功能]:将两个数组合并成一个新数组,原数组不会被改变
+        [返回值]:合并好的新数组
+    例如:
+    
+    */
+    var arr1=[2,3,4];
+    var arr2=[5,6,7];
+    var arr=arr1.concat(arr2); //合并的新数组
+    document.write(arr); //打印出新数组
+    /*
+    2.slice()
+        [格式]:数组.slice(start,end);
+        [功能]:基于当前数组获取指定区域元素(不包括end下标)并创建一个新数组,原数组不变
+        [返回值]:生成的新数组
+    例如:
+    */
+    var arr3=[1,2,3,4,5,6,7,8];
+    var a=arr3.slice(2,4);  //截取的元素为3,4
+    document.write(a);  //返回3,4
+    /*3.splice()
+        [格式]:数组.solice(start,length,元素);
+        [功能]:可以完成删除.插入,替换操作,会对原数组进行修改     
+        [返回值]:删除掉的元素
+    例如:
+    */
+    //删除功能
+    var arr4=["red","blue","green"];
+    
+    var b=arr4.splice(1,1);  //删除blue
+    alert(arr4); //输出为新数组
+    alert(b); //返回值为删掉的元素组成的数组
+
+    //插入功能
+    var arr5=["red","blue","green"];
+
+    var c=arr5.splice(1,0,"yellow","pink")  //在blue前面插入yellow和pink
+    alert (arr5); //输出新数组
+    alert (c); //因为没截取,所以返回空
+
+    //替换功能 :先删除,在插入
+    var arr6=["red","blue","green"];
+    var d=arr6.splice(1,1,"yellow");  //删除blue,插入yellow
+    alert(arr6); //输出新数组
+    alert(d);  //返回值为blue
+
+    /*
+    4.join
+        [格式]:数组.join()
+        [功能]:使用拼接符将数组中的元素拼接成字符串    
+        [返回值]:拼接好的字符串
+    例如:
+    */
+    var arr7=[10,25,23];
+    var e=arr7.join("+");
+    alert(arr7);  //数组不变
+    alert(e);  //返回值为拼接好的字符串
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

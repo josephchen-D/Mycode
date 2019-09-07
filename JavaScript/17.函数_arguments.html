@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    /*
+        [arguments]:
+            在每一个函数内,都有一个内置的数组,是一个变量,叫做arguments.
+            他可以存储当前函数传入的所有参数,而且通过传参的顺序排列.
+        [注]:arguments.length 表示传入的个数,arguments[n]表示传入的第n个数    
+        例如:
+    */
+        function sum(){
+            alert(arguments.length);  //输出传入函数的个数
+            document.write(arguments[0]);     //打印传入的第一个数
+        }
+        sum(5,1,5,5,)  
+
+
+      //例题:计算所有传入参数的和,具体传入多少不确定.
+      function add(){
+            var sum=0;
+            for(var i=0;i<arguments.length;i++){
+            sum+=arguments[i];                   
+            }
+            document.write(sum);   //输出所有数据的和          
+        }
+        add(5,1,5,5,)  
+
+
+    </script>
+</head>
+<body>  
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    /*
+    break语句
+    1.在switch语句中使流程跳出switch
+    2.在循环语句中使流程跳出当前的循环
+    例如:
+    
+        for(var i=1;i<=100;i++){
+            if(i==77){
+                break;  //到77停止打印,只能打印到76
+            }
+            document.write(i+"<br/>")
+        }
+    
+    continue语句
+     [注]:只能在循环语句中使用,使本次循环结束,接着进行下次是否执行的判断
+     例如:
+    */
+    for(var i=1;i<=100;i++){
+            if(i==77){
+                continue; //打印出1~100,没有77 (到77会结束本次循环,继续进行下次)
+            }
+            document.write(i+"<br/>")
+        }   
+    </script>
+  
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
